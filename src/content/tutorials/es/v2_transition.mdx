@@ -24,29 +24,29 @@ Siendo educador de secundaria, entiendo que una nueva versión de una herramient
 
 Si te sientes aprehensivo de la transición a la version 2 de p5.js, esta guía es para tranquilizarte. La mayoría de lo que hacen sus estudiantes funciona exactamente igual a como era antes.
 
-After reviewing multiple middle school and high school p5.js curricula ([CS4All Creative Web](https://blueprint.cs4all.nyc/curriculum/creative-web/), [CS4All Introduction to Computational Media](https://blueprint.cs4all.nyc/curriculum/intro-to-computational-media/), [CodeHS Digital Art with p5.js](https://codehs.com/course/p5-js/overview), [CSinSF Creative Computing](https://sites.google.com/sfusd.edu/csinsfcreativecomputing/home?authuser=0), [Processing Foundation Art + Code](https://processing.github.io/art-plus-code/codeAsCreativeMedium-intro/)) just two areas consistently require updates when moving from p5.js v1 to v2: 
+Después de revisar multiples curriculum de escuelas secundarias y escuelas de preparatoria ([CS4All Creative Web](https://blueprint.cs4all.nyc/curriculum/creative-web/), [CS4All Introduction to Computational Media](https://blueprint.cs4all.nyc/curriculum/intro-to-computational-media/), [CodeHS Digital Art with p5.js](https://codehs.com/course/p5-js/overview), [CSinSF Creative Computing](https://sites.google.com/sfusd.edu/csinsfcreativecomputing/home?authuser=0), [Processing Foundation Art + Code](https://processing.github.io/art-plus-code/codeAsCreativeMedium-intro/)) solamente dos áreas requieren actualizarse al ir de p5.js v1 hacia v2.
 
+* Eventos de Input
+* Carga de Assets
 
-* Input Events
-* Asset Loading
+Aunque existe [otras actualizaciones en v2](https://github.com/processing/p5.js-compatibility) (así como cambios a formas curvas, medición de texto, y funciones utilitarias), éstas no aparecen generalmente en los curriculum de escuelas secundarias y escuelas preparatorias, y son poco probables de que impaces en el tu trabajo con estudiantes. 
 
-Although there are [other v2 updates](https://github.com/processing/p5.js-compatibility) (such as changes to curved shapes, text measurement, and utility functions), these do not typically appear in middle school or high school curricula and are unlikely to impact your work with students. 
+Está guía te explica los cambios más comunes que encontrarás en un aula de secuandaria o preparatoria. Aprenderás como actualizar tu código para la versión 2 de p5.js, y cuándo los complementos de compatibilidad puedan ser útiles para sketches antiguos. 
 
-This guide walks you through just the changes you’re likely to encounter in a Middle School (MS) or High School (HS) classroom. You’ll learn how to update your code for p5.js v2, and when compatibility add-ons might be helpful for older sketches.
+He tratado de incluir solo que necesitas y nada más, para que puedas ponerte al día fácilmente y estar seguro de enseñar con la versión 2 de p5.js. 
 
-I’ve tried to include everything you need and nothing you don’t, so you can get up to speed easily and feel confident teaching with p5.js v2.
+## Versiones en el Editor Web
 
-## Versions in the Web Editor
+La mayoría del tiempo, tus estudiantes y tú pueden usar la versión 2 de p5.js sin hacer cambios.
 
-Most of the time, you and your students can use p5.js v2 without changing anything.
+Sin embargo, si abres un sketch viejo (por ejemplo, algo que un estudiante creó en años anteriores o un ejemplo desde un curriculum diseñado para la versión 1 de p5.js), y su comportamiento no es el mismo, tienes estas opciones:
 
-However, if you open an older sketch (for example, something a student created in a previous year or an example from a curriculum designed for p5.js v1), and it doesn’t behave quite the same, you have options:
-
+* **Actualizar el sketch** usando el ejemplo de esta guía
 * You can **update the sketch** using the examples in this guide
-* You can **turn on a compatibility add-on**
-* You can **switch the sketch back to p5.js v1** in the Editor
+* Activar el **complemento de compatibilidad** 
+* Volver al sketch para la versión 1 de p5.js en el Editor Web 
 
-![Screenshot of the p5.js Web Editor version picker showing a list of versions.](../images/2.0/v2-libman.png)
+![Pantallazo de la selección de veriones de p5.js en el Editor Web.](../images/2.0/v2-libman.png)
 
 
 ## Input Events
