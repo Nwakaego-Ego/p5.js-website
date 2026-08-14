@@ -62,29 +62,28 @@ Input events are likely to be the first place you notice differences in p5.js v2
 This section covers the input event code you’re most likely to see in MS/HS classrooms and the changes introduced in p5.js v2.
 
 
-### Mouse Clicks
+### Clicks de Mouse 
 
-
-In p5.js v1, checking for a specific mouse button looked like this: 
+En la versión 1 de p5.js, verificar por un botón específico del mouse se veía así:
 
 ```js
 if (mouseButton === RIGHT) {
-  // do a thing (p5.js v1)
+  // haz algo (p5.js v1)
 }
 ```
 
-In p5.js v2, it looks like this:
+En la versión 2 de p5.js, se ve así:
 
 ```js
 if (mouseButton.right) {
-  // do a thing (p5.js v2)
+  // haz algo (p5.js v2)
 }
 ```
 
-**Reference:** [mouseButton](/reference/p5/mouseButton/)
+**Referencia:** [mouseButton](/reference/p5/mouseButton/)
 
-<Callout title="Teacher Note">
-In v2, mouseButton is now an object with boolean properties (left, right, center). This makes it possible to detect multiple buttons at once. This is especially helpful for drawing apps or paint tools, where students may want different behaviors for different mouse buttons.
+<Callout title="Nota de profesor">
+En v2, mouseButton es ahora un objeto con propiedades booleanas (izquierda, derecha, centro). Esto hace posible detectar multiples botones de una vez. Esto es especialmente útil para aplicaciones de dibujo o herramientas para pintar, donde tus estudiantes quieran diferentes comportamientos para los diferentes botones del mouse.
 </Callout>
 
 ### Keyboard Input
