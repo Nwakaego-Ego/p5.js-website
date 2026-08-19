@@ -42,48 +42,47 @@ La mayoría del tiempo, tus estudiantes y tú pueden usar la versión 2 de p5.js
 Sin embargo, si abres un sketch viejo (por ejemplo, algo que un estudiante creó en años anteriores o un ejemplo desde un curriculum diseñado para la versión 1 de p5.js), y su comportamiento no es el mismo, tienes estas opciones:
 
 * **Actualizar el sketch** usando el ejemplo de esta guía
-* You can **update the sketch** using the examples in this guide
 * Activar el **complemento de compatibilidad** 
 * Volver al sketch para la versión 1 de p5.js en el Editor Web 
 
 ![Pantallazo de la selección de veriones de p5.js en el Editor Web.](../images/2.0/v2-libman.png)
 
 
-## Input Events
+## Eventos de Input
 
-Input events are likely to be the first place you notice differences in p5.js v2. Students may use input events to: 
+Es probable que los eventos de Input sean el primer lugar donde notes diferencias en la versión 2 de p5.js. Los estudiantes pueden usar eventos de input para:
 
-* Select or toggle buttons 
-* Draw with the mouse while pressed
-* Change variables when a key is pressed 
-* Clear or save the canvas
-* Moving a game character with arrow keys
+* Seleccionar o alternar botones
+* Dibujar con el ratón mientras se mantiene pulsado
+* Cambiar variables al pulsar una tecla
+* Borrar o guardar el lienzo
+* Mover un personaje de un juego con las teclas de flecha
 
 This section covers the input event code you’re most likely to see in MS/HS classrooms and the changes introduced in p5.js v2.
+Esta sección abarca el código de eventos de input que probablemente verás en las aulas de secundaria o preparatoria y los cambios introducidos en la versión 2 de p5.js.
+
+### Clicks del Mouse
 
 
-### Mouse Clicks
-
-
-In p5.js v1, checking for a specific mouse button looked like this: 
+En la versión 1 de p5.js, verificar por un botón específico del mouse se veía así:
 
 ```js
 if (mouseButton === RIGHT) {
-  // do a thing (p5.js v1)
+  // haz algo (p5.js v1)
 }
 ```
 
-In p5.js v2, it looks like this:
+En la versión 2 de p5.js se ve así:
 
 ```js
 if (mouseButton.right) {
-  // do a thing (p5.js v2)
+  // haz algo (p5.js v2)
 }
 ```
 
-**Reference:** [mouseButton](/reference/p5/mouseButton/)
+**Referencia:** [mouseButton](/reference/p5/mouseButton/)
 
-<Callout title="Teacher Note">
+<Callout title="Nota del profesor">
 In v2, mouseButton is now an object with boolean properties (left, right, center). This makes it possible to detect multiple buttons at once. This is especially helpful for drawing apps or paint tools, where students may want different behaviors for different mouse buttons.
 </Callout>
 
