@@ -134,7 +134,7 @@ p5.js v2
 
 <th>
 
-Reference
+Referencia
 
 </th>
 
@@ -188,31 +188,31 @@ Reference
 </table>
 
 
-### Compatibility Add-On (Optional)
+### Complementos de compatibilidad (Opcional)
 
-For new teaching, follow the v2 code shown above.
+Para la nueva enseñanza, sigue el código de versión 2 que se muestra arriba. 
 
-If you have older sketches that you want to keep working without updating the code, the **Data & Events** compatibility add-on restores the v1 behavior. 
+Si tienes sketches antiguos que quieres seguir usando sin actualizar el código, el complemento de compatibilidad **Datos y Eventos** restaura el comportamiento de la versión 1.
 
-See *Compatibility Add-Ons* section below for more detail. 
+Consula la sección *Complementos de compatibilidad* a continuación para obtener más detalles.
 
 
-## Loading Assets
+## Carga de Recursos
 
-As students advance in the curriculum, they may want to personalize their sketches by adding images, sounds, fonts, or other assets. 
+A medida que los estudiantes avanzan en el curriculum, podrían querer personalizar sus sketches añadiendo imágenes, sonidos, fuentes tipográficas, u otros recursos.
 
-In p5.js v1, this was done using `preload()`.  
-In p5.js v2, we use `async` and `await` inside `setup()`. 
+En la versión 1 de p5.js, esto se hacía usando `preload()`.
+En la versión 2 de p5.js, usamos `async` y `await` dentro de `setup()`.
 
-### `preload()` in p5.js v1
+### `preload()` en p5.js v1
 
-In p5.js v1, `preload()` stopped the sketch from running until everything inside it finished loading:
+En la versión 1 de p5.js, `preload()` detenía el sketch de ejecutarse hasta que todo lo que contenía terminara de cargarse:
 
 ```js
 let img;
 
 function preload(){
-  // used in p5.js v1, but not in v2
+  // usada en p5.js v1, pero no en v2
   img = loadImage("cat.jpg");
 }
 
@@ -223,9 +223,9 @@ function setup(){
 ```
 
 
-### `async` and `await` in p5.js v2
+### `async` y `await` en p5.js v2
 
-In the p5.js v2, `preload()` is no longer used, and assets are loaded using `await` inside `async setup()`.  This works for images, sounds, fonts, and other files: 
+En la versión 2 de p5.js, `preload()` ya no se usa, y los recursos son cargados usando `await` dentro de `async setup()`. Esto funciona para imágenes, sonidos, fuentes tipográficas, y otros arhivos:
 
 ```js
 let img;
@@ -233,7 +233,7 @@ let img;
 async function setup() {
   createCanvas(100, 100);
   
-  // waits for asset to load
+  // espera a que los recursos se carguen
   img = await loadImage("cat.jpg");
   
   image (img, 0, 0);
