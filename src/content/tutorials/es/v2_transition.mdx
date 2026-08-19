@@ -86,34 +86,34 @@ if (mouseButton.right) {
 En v2, mouseButton es ahora un objeto con propiedades booleanas (izquierda, derecha, centro). Esto hace posible detectar multiples botones de una vez. Esto es especialmente útil para aplicaciones de dibujo o herramientas para pintar, donde tus estudiantes quieran diferentes comportamientos para los diferentes botones del mouse.
 </Callout>
 
-### Keyboard Input
+### Entrada de Teclado
 
-In p5.js v1, most MS/HS curricula checked for keys using code like: 
+En la versión 1 de p5.js, la mayoría del curriculum de secundaria y preparatoria verificaban el uso de teclas en código como:
 
 ```js
 if (keyIsPressed) {
   if (key === UP_ARROW){
-    // do a thing (p5.js v1)
+    // haz algo (p5.js v1)
   }
 }
 ```
 
-`keyIsPressed` is often introduced early as a simple Boolean variable and `key ===` fits into the comparison structures students are already using.
+A menudo `keyIsPressed` es enseñado inicialmente como una variable simple de tipo Booleado y `key ===` encaja con la estructura de comparación que los estudiantes ya están usando.
 
-In p5.js v2, the recommended way to check for keys is:
+En la versión 2 de p5.js, la manera recomendada de ceritifcar por teclas es:
 
 ```js
 if (keyIsDown(UP_ARROW)) {
-  // do a thing (p5.js v2)
+  // has algo (p5.js v2)
 }
 ```
 
-`keyIsDown()` is now the recommended approach because it works consistently across both v1 and v2 and supports checking multiple keys at once.
+`keyIsDown()` es el acercamiento recomendado actual ya que funciona consistentemente a travez de ambas versiones v1 y v2, y soporta verificaciones de múltiples teclas a la vez.
 
 
-**Reference:** [keyIsDown](https://beta.p5js.org/reference/p5/keyIsDown/)
+**Referencia:** [keyIsDown](https://beta.p5js.org/reference/p5/keyIsDown/)
 
-### Input Events Quick Reference
+### Referencia Rápida de Eventos de Entrada
 
 
 <table>
