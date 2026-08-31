@@ -3,33 +3,38 @@ import { render } from 'astro:content';
 import { Icon } from "@components/Icon"
 const { entry } = Astro.props;
 const { Content } = await render(entry);
-const { link, title } = entry.data;
+const { link, title, backgroundColor, color } = entry.data;
 ---
 
-<div class="top-banner text-accent-type-color"  data-title={title} >
+<div class="top-banner text-accent-type-color"
+     style={{
+       display: 'none',
+       backgroundColor,
+       color,
+     }} data-title={title} >
   <a class="banner-content" href={link} target="_blank">
     <Content />
   </a>
-  <button id="hideBanner" aria-label="Hide banner"><Icon kind="close" /></button>
+  <button id="hideTopBanner" aria-label="Hide banner"><Icon kind="close" /></button>
 </div>
 
 <script is:inline>
-// const banner = document.querySelector('.banner');
-// const hideBannerBtn = document.querySelector('#hideBanner');
-// if (banner && hideBannerBtn) {
-//   const hiddenBanner = window.sessionStorage.getItem('hideBanner');
-//   const title = banner.getAttribute('data-title');
-//   if (hiddenBanner !== title) {
-//     banner.removeAttribute('style');
-//   }
-//   const hideBanner = () => {
-//     banner.setAttribute('style', 'display: none');
-//     try {
-//       window.sessionStorage.setItem('hideTopBanner', title || '');
-//     } catch (e) {
-//       console.error(e);
-//     }
-//   }
-//   hideBannerBtn.addEventListener('click', hideBanner);
-// }
+const banner = document.querySelector('.top-banner');
+const hideBannerBtn = document.querySelector('#hideTopBanner');
+if (banner && hideBannerBtn) {
+  const hiddenBanner = window.sessionStorage.getItem('hideTopBanner');
+  const title = banner.getAttribute('data-title');
+  if (hiddenBanner !== title) {
+    banner.style.display = 'flex';
+  }
+  const hideBanner = () => {
+    banner.setAttribute('style', 'display: none');
+    try {
+      window.sessionStorage.setItem('hideTopBanner', title || '');
+    } catch (e) {
+      console.error(e);
+    }
+  }
+  hideBannerBtn.addEventListener('click', hideBanner);
+}
 </script>

@@ -14,5 +14,7 @@ export const topBannerCollection = defineCollection({
       title: z.string(),
       link: z.string(),
       hidden: z.boolean().optional(),
+      backgroundColor: z.string().optional(),
+      color: z.string().optional(),
     }),
 });

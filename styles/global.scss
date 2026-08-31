@@ -586,7 +586,7 @@ body {
   padding: var(--spacing-xs) var(--spacing-md);
   border-bottom: 1px solid var(--type-color);
   margin-left: var(--nav-offset-x);
-  background-color: #1E32AA;
+  background-color: var(--bg-green);
   color: white;
 
   & .banner-content {
